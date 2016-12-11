@@ -32,7 +32,6 @@ module PaperTrail
       # Override this method in your controller to call a different
       # method, e.g. `current_person`, or anything you like.
       def user_for_paper_trail
-        puts "user for paper trail call........................................."
         return unless defined?(current_user)
         ActiveSupport::VERSION::MAJOR >= 4 ? "#{current_user.class.name}-#{current_user.try!(:id)}-#{current_user.try!(:first_name)}" : "#{current_user.class.name}-#{current_user.try(:id)}-#{current_user.try(:first_name)}"
       end

@@ -26,7 +26,6 @@ module PaperTrail
       else
         data = self.object.to_s
       end
-      puts "version chnaged................"
       logg.tagged(:version) do
         lodata = {
           "item_id" => self.item_id,
