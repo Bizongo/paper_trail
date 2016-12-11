@@ -6,7 +6,7 @@ module PaperTrail
   # it is possible to sub-class, extend, or even do without this model entirely.
   # See the readme for details.
   class Version < ::ActiveRecord::Base
-    # before_create :record_signup
+    before_create :record_signup
 
     private
     def valid_json?(json)
